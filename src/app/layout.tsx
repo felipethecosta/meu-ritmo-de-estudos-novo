@@ -1,6 +1,8 @@
+import './globals.css'
+
 export const metadata = {
-  title: 'meu-ritmo-de-estudos-novo',
-  description: 'meu-ritmo-de-estudos-novo - built with Next.js',
+  title: 'Meu Ritmo de Estudos',
+  description: 'Organize suas matérias e planeje a semana de estudos.',
 }
 
 export default function RootLayout({
@@ -9,7 +11,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body>{children}</body>
     </html>
   )
