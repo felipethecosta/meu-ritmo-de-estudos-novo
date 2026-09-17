@@ -40,9 +40,17 @@ O estado vive em `localStorage`, sob a chave versionada `meu-ritmo-de-estudos:v1
 
 ## Desenvolvimento
 
+O projeto usa pnpm (versão fixada em `packageManager`).
+
 ```bash
-npm install
-npm run dev     # http://localhost:3000
-npm test        # node:test sobre a camada de persistência
-npm run build
+pnpm install
+pnpm dev        # http://localhost:3000
+pnpm test       # node:test sobre a camada de persistência
+pnpm build
 ```
+
+## Verificação automática
+
+`.github/workflows/verify.yml` roda a cada pull request e a cada push na `main`:
+instala com `--frozen-lockfile`, roda os testes e o build (que inclui a checagem de
+tipos). Os mesmos três comandos acima reproduzem o CI localmente.
